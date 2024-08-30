@@ -1,13 +1,15 @@
 .post-card-box {
-  margin: 100px 0 100px;
+  margin: 100px 0 100px; /* Top and bottom margin for the entire post card box */
   padding: 0;
 
   li {
     position: relative;
     list-style: none;
     float: left;
-    width: 50%;
-    transition: all .3s;
+    width: 50%; /* Assuming this is part of a two-column layout */
+    transition: all 0.3s;
+    margin-bottom: 20px; /* Adds vertical space between rows of posts */
+    margin-right: 20px; /* Adds horizontal space between columns of posts */
     &:hover {
       opacity: 0.9;
     }
@@ -16,6 +18,7 @@
 
 .post-card {
   position: relative;
+  margin-bottom: 20px; /* Adds space below each post card */
 
   .post-card-image {
     display: block;
@@ -32,7 +35,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0,0,0,.3);
+      background: rgba(0, 0, 0, 0.3);
     }
   }
 
@@ -54,7 +57,7 @@
       color: $white;
       margin: 0 0 10px;
       &:hover {
-        opacity: .8;
+        opacity: 0.8;
       }
     }
 
