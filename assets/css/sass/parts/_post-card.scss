@@ -1,43 +1,23 @@
 .post-card-box {
-  margin: 100px 0 100px; /* Top and bottom margin for the entire post card box */
-  padding: 0;
+  display: flex; /* or display: grid; */
+  flex-wrap: wrap; /* Allows wrapping of items */
+  gap: 20px; /* Space between items */
+  padding: 20px; /* Optional: Padding around the container */
+  margin: 0; /* Remove default margin */
+}
 
-  li {
-    position: relative;
-    list-style: none;
-    float: left;
-    width: 50%; /* Assuming this is part of a two-column layout */
-    transition: all 0.3s;
-    margin-bottom: 20px; /* Adds vertical space between rows of posts */
-    margin-right: 20px; /* Adds horizontal space between columns of posts */
-    &:hover {
-      opacity: 0.9;
-    }
-  }
+.post-card-box li {
+  list-style: none; /* Remove default list styling */
+  width: calc(33.333% - 20px); /* Adjust based on the gap value */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
 .post-card {
-  position: relative;
-  margin-bottom: 20px; /* Adds space below each post card */
-
-  .post-card-image {
-    display: block;
-    width: 100%;
-    min-height: 150px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.3);
-    }
-  }
+  background-color: #fff; /* Optional: Background color for each card */
+  border: 1px solid #ddd; /* Optional: Border around each card */
+  padding: 10px; /* Optional: Padding inside each card */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Shadow for card effect */
+}
 
   .post-card-body {
     position: absolute;
